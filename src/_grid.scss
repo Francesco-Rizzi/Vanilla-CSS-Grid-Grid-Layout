@@ -1,0 +1,63 @@
+//BREAKPOINTS (FROM BOOTSTRAP)
+$media-mobile: 576px;
+$media-tablet: 768px;
+$media-desktop: 992px;
+$media-desktop-large: 1200px;
+
+//GRID GENERATOR CONFIG
+$grid-columns: 12;
+$spacing: 15px;
+$col-types: 'xs', 'sm', 'md', 'lg', 'xl';
+$col-min-widths: 0, $media-mobile, $media-tablet, $media-desktop, $media-desktop-large;
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: $spacing;
+	padding-right: $spacing;
+}
+
+.row {
+	display: grid;
+	grid-template-columns: repeat($grid-columns, 1fr);
+	grid-gap: $spacing;
+}
+
+//RESPONSIVE CONTAINER
+@media (min-width: $media-mobile) {
+	.container {
+		width: 540px;
+	}
+}
+
+@media (min-width: $media-tablet) {
+	.container {
+		width: 720px;
+	}
+}
+
+@media (min-width: $media-desktop) {
+	.container {
+		width: 960px;
+	}
+}
+
+@media (min-width: $media-desktop-large) {
+	.container {
+		width: 1140px;
+	}
+}
+
+//CSS GRID LAYOUT GENERATION
+
+@for $index from 1 through length($col-types) {
+	$col: nth($col-types, $index);
+	$width: nth($col-min-widths, $index);
+	@media (min-width: #{$width}) {
+		@for $i from 1 to $grid-columns+1 {
+			.col-#{$col}-#{$i} {
+				grid-column: span $i;
+			}
+		}
+	}
+}
