@@ -1,5 +1,5 @@
 # Vanilla CSS-Grid Grid layout
-## An highly customizable grid layout based on the native `CSS-Grid` specifications.
+## A highly customizable grid layout based on the native `CSS-Grid` specifications.
 
 #### Basic Q&A:
 **Q**: What the heck is `CSS-Grid`?
