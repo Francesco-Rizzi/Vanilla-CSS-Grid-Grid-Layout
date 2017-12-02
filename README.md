@@ -21,7 +21,7 @@
 
 <br/><br/>
 ![CSS-Grid image](assets/css-grid-image.png?raw=true "CSS-Grid image")
-<div style="text-align:center">Show me the stuff.</div><br/><br/>
+<div style="text-align:center"><i>show me the stuff</i></div><br/><br/>
 
 #### How-to customize:
 - You can customize breakpoints, spacings, number of columns, class-names, and more!
